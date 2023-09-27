@@ -1,11 +1,8 @@
 body{
     margin: 0;
     font-family: 'Manjari', sans-serif;
-    background-image: url(/assets/wallpaper8.webp);
-    background-attachment: fixed;
-    background-position: center;
     overflow: scroll;
-    overflow-x: hidden;
+    background-color: #000000;
 }
 p{
     margin: 0;
@@ -18,34 +15,43 @@ h1{
     margin: 0;
 }
 /* Header */
-nav{
+nav {
+    position: fixed;
     width: 100%;
-}
-nav ul{
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    list-style-type: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
-nav ul a{
-    margin: 50px;
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul a {
+    margin: 30px; /* Adjust margin for smaller screens */
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px; /* Reduce font size for smaller screens */
     color: #F39F5A;
     text-decoration: none;
     transition: 0.15s;
 }
+
 nav ul a:hover{
     text-decoration: underline;
 }
 /* introduction */
-.box-frame{
-    margin-top: 120px;
+.box-frame {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-}   
+    flex-direction: row; /* Stack content vertically on small screens */
+    align-items: center; /* Center align content on small screens */
+}  
 .desc-frame {
     margin: 50px 25px;
     text-align: center;
@@ -73,19 +79,17 @@ nav ul a:hover{
     opacity: 0.5;
 }
 .me-img{
-    margin: 50px  25px;
+    
     width: 400px;
     border-radius: 50%;
 }
 
 /* about me */
-.wrapper{
-    margin-right: 50px;
-    margin-left: 50px;
-    background-image: linear-gradient(to left, rgb(13, 13, 13), rgb(29, 29, 29), rgb(12, 12, 12));
-    border-radius: 20px;
-}
+
 .about-me{
+    position: absolute;
+    top: 0;
+    bottom: 0;
     padding-top: 25px;
     padding-bottom: 50px;
     margin-top: 250px;
@@ -148,3 +152,37 @@ nav ul a:hover{
 .project-session h1{
     color: #F39F5A;
 }
+
+/* Video Background */
+#myVideo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    filter: brightness(25%);
+  }
+
+  @media screen and (max-width: 800px) {
+    #myVideo{
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    nav ul {
+        flex-direction: row; /* Stack links vertically on small screens */
+        align-items: center; /* Center align links on small screens */
+    }
+
+    nav ul a {
+        margin: 10px; /* Adjust margin for smaller screens */
+    }
+    .box-frame {
+        left: 50;
+        right: 50;
+        flex-direction: column ;
+        margin: 20px; /* Adjust margin for smaller screens */
+    }
+    .me-img{
+        width: 300px;
+    }
+  }
