@@ -14,7 +14,7 @@
 </head>
 <body>
     <video autoplay muted loop id="myVideo">
-        <source src="assets/Background2.mp4" type="video/mp4">
+        <source src="assets/Background3.mp4" type="video/mp4">
     </video>
     <head>
         <nav>
@@ -22,29 +22,25 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a style="color: white;" href="contact.html">Contact</a></li>
             </ul>
         </nav>       
-    </head>      
-        <div class="wrapper-contact-box">
-            <div class="contact-box">
-                <div class="contact-title">
-                    <p>Contact me </p>
-                    <h1>Contact</h1>
-                </div>
-                <div class="contact-box-icon">
-                    <ul class="contact-icon">
-                        <li><a href="https://www.instagram.com/raihanjordy/" class="fa fa-instagram" target="_blank" style="font-size:48px;color:rgb(255, 255, 255)"></a></li>
-                        <li><a href="https://twitter.com/LabanRaihan" class="fa fa-twitter" target="_blank" style="font-size:48px;color:rgb(103, 217, 255)"></a></li>
-                        <li><a href= "mailto: raihanlaban123@gmail.com"  class="fa fa-envelope" target="_blank" style="font-size:48px;color:rgb(253, 76, 76)"></a></li>
-                        <li><a href="https://github.com/RaihanJL" class="fa fa-github" target="_blank" style="font-size:48px;color:#4078c0"></a></li>
-                        <li><a href="https://www.linkedin.com/in/raihan-laban-00334514b/" class="fa fa-linkedin-square" target="_blank" style="font-size:48px;color:#0077b5"></a></li>
-                    </ul>
-                </div>
-                <div class="contact-icon-desc">
-                    <p style="margin-bottom: 20px;">Let me know if you are interested with me, just contact me from the link above.</p>
-                </div>
-            </div>
+    </head>
+    
+    <div class="wrapper-contact-box">
+        <p style="text-align: center;">Keep in touch with me</p>
+        <h1>Contact Me</h1>
+        <div class="contact-form-box">
+            <form class="contact-form">
+                <label for="name">Name :</label><br>
+                <input type="text" placeholder="Enter Your Name" id="name" name="name"><br>
+                <label for="Gmail">E-Mail :</label><br>
+                <input type="email" placeholder="Enter Your E-Mail" id="mail" name="email"><br>
+                <label for="Message">Send Message :</label><br>
+                <textarea name="message" placeholder="Enter Your Message" required cols="40" rows="10"></textarea><br>
+                <input class="form-button" style="margin-bottom: 25px;" type="submit" value="Submit">
+              </form>
         </div>
+    </div>     
 </body>
 </html>

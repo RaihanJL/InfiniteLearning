@@ -24,7 +24,7 @@ nav {
     display: flex;
     justify-content: center;
     left: 50%;
-    right: 50%;  
+    right: 50%; 
 }
 
 nav ul {
@@ -48,15 +48,18 @@ nav ul a {
 nav ul a:hover{
     opacity: 0.5;
 }
+nav ul a:active{
+    opacity: 0.3;
+}
 /* introduction */
 .box-frame {
     position: absolute;
     top: 50%;
     left: 45%;
-    transform: translate(-50%, -50%);
+    transform: translate(-45%, -50%);
     display: flex;
-    flex-direction: row; /* Stack content vertically on small screens */
-    align-items: center; /* Center align content on small screens */
+    flex-direction: row; 
+    align-items: center; 
 }  
 .desc-frame {
     margin: 50px 25px;
@@ -94,7 +97,8 @@ nav ul a:hover{
 /* about me */
 .wrapper{   
     position: absolute;
-    top: 10%;    
+    top: 5%;    
+    border-radius: 20px;
 }
 .about-me{
     padding: 25px;
@@ -114,53 +118,36 @@ nav ul a:hover{
     font-weight: bold;
 }
 .about-box {
-    
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 20%;
+    margin-right: 20%;
 }
-.about-desc{
-    margin-left: 25px ;
-    margin-right: 25px;
-}
+
 .about-pic img{
-    border: 2px solid #F39F5A;
+    border: 1px solid #F39F5A;
     position: sticky;
     border-radius: 20px;
-    width: 300px;
-    border-radius: 50%;
+    width: 350px;
     margin-bottom: 20px;
+}
+.about-word{
+    padding: 25px;
+    border-radius: 15px; 
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 .about-word p{
     text-align: justify;
     font-size: 20px;
     color:#fff;
-    margin-bottom: 20px;
+    
 }
-.about-table{
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid #F39F5A;
-    padding-top: 20px;
-    border-radius: 5px;
-}
-.about-table ul li{
-    color:#fff;
-}
-.soft-skills h1, .hard-skills h1{
-    text-align: center;
-    color: #F39F5A;
-    text-decoration: underline;
-}
-.about-word2 p{
+.about-word h1{
+    font-size: 24px;
     text-align: justify;
-    font-size: 20px;
-    color: #fff;
-    margin-top: 20px;
-}
-/* Project */
-.project-session h1{
     color: #F39F5A;
 }
 
@@ -179,48 +166,136 @@ nav ul a:hover{
     top: 10%; /* Place it at the bottom */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center horizontally */
-    width: 600px; /* Adjust the width as needed */
-    border-radius: 10px;
+    width: 100%; /* Adjust the width as needed */
 }
-
 .wrapper-contact-box h1{
+    font-size: 48px;
     text-align: center;
     color: #F39F5A;
 }
-
-.contact-title p{
-    margin-top: 15px;
-    text-align: center;
-    color: white;   
-}
-
 .contact-icon{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 0;
     
 }
-.contact-icon  li{
+.contact-icon li{
     text-decoration: none;
     list-style-type: none;
+    padding-left: 15px ;
+    padding-right: 15px;
 }
 .contact-icon a {
-    
     display: flex;
     text-decoration: none;
 }
-
+.contact-icon a:hover{
+    font-size: 64px;
+}
 .contact-icon-desc p{
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
+.contact-form{
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-form label{
+     color: white;
+}
+.contact-form input{
+    padding: 15px;
+    border-radius: 5px;
+}
+.contact-form textarea{
+    border-radius: 5px;
+}
+.form-button{
+    width: 200px;
+    font-size: 15px;
+    color: #F39F5A;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.15s;
+    border: 1px solid #F39F5A;
+    
+}
+.form-button:hover{
+    background-color: black;
+}
+.form-button:active{
+    opacity: 0.5;
+}
+/* Skills */
+.skill-wrapper{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+}
+.skill-wrapper h1{
+    color: #F39F5A;
+    text-align: center;
+}
+.skill-wrapper ul li{
+    color: white;
+}
+.skill-box{
+    margin: 25px;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+}
+.wrapper-project-box{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 20px;
+    background-image: linear-gradient( black, rgb(74, 0, 0));
+    border: 1px solid #F39F5A;
+    border-radius: 5px;
+    
+}
+.project-box{
+    text-align: center;
+}
+.project{
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.project-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.img-container{
+    margin-bottom: 20px;
+}
+.img-container img{
+    border: 3px solid #F39F5A;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;    
+}
+.desc-container h1{
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+}
 @media screen and (max-width: 800px) {
     .wrapper-contact-box{
-        top: 10%;
         width: 100%;
     }
+    .wrapper{
+        top: 10%;
+    }
+    
     #myVideo{
         transform: translate(-50%, -50%);
         top: 50%;
@@ -249,6 +324,7 @@ nav ul a:hover{
         width: 300px;
     }
     .about-box{
+        margin: 0;
         padding: 0;
         align-items: center;
         justify-content: center;
@@ -257,15 +333,43 @@ nav ul a:hover{
     .about-desc{
         margin: 0;
     }
-    .wrapper{
-        top: 5%;
-        left: 0;
-        right: 0;
-        margin: 15px;
+    .about-me{
+        padding: 0;
     }
     .contact-box{
         margin-left: 20px;
         margin-right: 20px;
 
     }
+    .form-button{
+        width: 100%;
+    }
+    .about-pic img{
+        width: 200px;
+    }
+    .about-word{
+        border-radius: 0;
+        font-size: 10px
+    }
+    .about-word h1, .about-word p{
+        text-align: justify;
+    }
+    .project{
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .wrapper-project-box{
+        margin: 0;
+        border-left: none;
+    }
+    .project-section{
+        background-color: black;
+        width: 100%;
+        border: 2px solid #F39F5A;
+        border-radius: 5px;
+    }
+    
 }
