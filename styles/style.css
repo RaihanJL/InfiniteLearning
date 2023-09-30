@@ -3,7 +3,8 @@ body{
     font-family: 'Manjari', sans-serif;
     overflow: scroll;
     background-color: #000000;
-    
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 p{
     margin: 0;
@@ -32,7 +33,7 @@ nav ul {
     padding-left: 0;
     list-style-type: none;
     margin: 0;
-    border-bottom: 1px solid #F39F5A;
+    border-bottom: 3px solid #F39F5A;
 }
 
 nav ul a {
@@ -85,17 +86,15 @@ nav ul a:hover{
     opacity: 0.5;
 }
 .me-img{
+    border: 3px solid #F39F5A;
     width: 400px;
     border-radius: 50%;
 }
 
 /* about me */
-.wrapper{
+.wrapper{   
     position: absolute;
-    top: 10%;
-    margin-right: 50px;
-    margin-left:50px;
-    border-radius: 10px;
+    top: 10%;    
 }
 .about-me{
     padding: 25px;
@@ -115,8 +114,7 @@ nav ul a:hover{
     font-weight: bold;
 }
 .about-box {
-    padding-left: 150px;
-    padding-right: 150px;
+    
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -124,12 +122,13 @@ nav ul a:hover{
 }
 .about-desc{
     margin-left: 25px ;
+    margin-right: 25px;
 }
 .about-pic img{
+    border: 2px solid #F39F5A;
     position: sticky;
     border-radius: 20px;
     width: 300px;
-    
     border-radius: 50%;
     margin-bottom: 20px;
 }
@@ -173,8 +172,55 @@ nav ul a:hover{
     object-fit: cover;
     filter: brightness(50%);
   }
+/* contact */
+/* Center the contact box at the bottom of the page */
+.wrapper-contact-box {
+    position: absolute;
+    top: 10%; /* Place it at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 600px; /* Adjust the width as needed */
+    border-radius: 10px;
+}
+
+.wrapper-contact-box h1{
+    text-align: center;
+    color: #F39F5A;
+}
+
+.contact-title p{
+    margin-top: 15px;
+    text-align: center;
+    color: white;   
+}
+
+.contact-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    
+}
+.contact-icon  li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.contact-icon a {
+    
+    display: flex;
+    text-decoration: none;
+}
+
+.contact-icon-desc p{
+    text-align: center;
+    margin-top: 25px;
+}
 
 @media screen and (max-width: 800px) {
+    .wrapper-contact-box{
+        top: 10%;
+        width: 100%;
+    }
     #myVideo{
         transform: translate(-50%, -50%);
         top: 50%;
@@ -212,6 +258,14 @@ nav ul a:hover{
         margin: 0;
     }
     .wrapper{
+        top: 5%;
+        left: 0;
+        right: 0;
         margin: 15px;
+    }
+    .contact-box{
+        margin-left: 20px;
+        margin-right: 20px;
+
     }
 }
